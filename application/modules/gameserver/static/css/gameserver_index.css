@@ -1,0 +1,63 @@
+.gameserver {
+   height:100%;
+   width: 100%;
+   margin: 0;
+   padding: 0;
+   border: 0;
+}
+.gameserver td.middle {
+   vertical-align: middle;
+   text-align: center;
+}
+.gameserver td.vertical {
+   vertical-align: middle;
+   text-align: left;
+}
+.gameserver img.list_image_map {
+    padding: 2px;
+    border: 1px solid #ccc;
+    border-radius: 2px;
+    width: 126px !important;
+    height: 96px !important;
+    min-width: 126px !important;
+}
+.gameserver .list_icons {
+    width: 22px !important;
+    height: 22px !important;
+    border: 1px solid #ccc;
+    border-radius: 2px;
+    display: block;
+    float: left;
+    margin: 5px 5px 0 0;
+}
+.gameserver img.game_icon {
+    padding: 2px;
+}
+.gameserver span.status_icon_onl {
+    background-image: url(../other/icon_online.gif) !important; 
+    background-repeat: no-repeat;
+    background-position: center 2px;
+}
+.gameserver span.status_icon_nrs {
+    background-image: url(../other/icon_no_response.gif) !important;
+    background-repeat: no-repeat;
+    background-position: center 2px;
+}
+.gameserver span.status_icon_onp {
+    background-image: url(../other/icon_online_password.gif) !important;
+    background-repeat: no-repeat;
+    background-position: center 2px;
+}
+.gameserver img.country_icon {
+    padding: 2px;
+}
+.gameserver a.details_icon {
+    background-image: url(../other/icon_details.gif) !important;
+    background-repeat: no-repeat;
+    background-position: center 2px;
+}
+.gameserver img.country_icon[title="Location: XX"],
+.gameserver img.country_icon[title="Standort: XX"],
+.gameserver img.country_icon[title="XX"] {
+    display: none;
+}

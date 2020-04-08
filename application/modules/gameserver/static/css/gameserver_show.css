@@ -1,0 +1,78 @@
+.gameserver div.cont_image {
+    text-align: center;
+}
+.gameserver div.gameimage {
+    position: relative;
+    width: 160px !important;
+    height: 120px !important;
+    margin: 0 auto;
+}
+.gameserver img#image_map {
+    vertical-align: middle;
+    padding: 2px;
+    border: 1px solid #ccc;
+    border-radius: 2px;
+}
+.gameserver img#icon_game {
+    position: absolute;
+    z-index: 2;
+    top: 6px;
+    left: 6px;
+    width: 16px;
+    height: 16px;
+    opacity: 0.8;
+}
+.gameserver img#icon_location {
+    position: absolute;
+    z-index: 2;
+    top: 6px;
+    right: 6px;
+    opacity: 0.8;
+}
+.gameserver img#icon_password {
+    position: absolute;
+    z-index: 2;
+    bottom: 2px;
+    right: 2px;
+    opacity: 0.8;
+}
+.gameserver img#icon_location[title="Location: XX"],
+.gameserver img#icon_location[title="Standort: XX"],
+.gameserver img#icon_location[title="XX"] {
+    display: none;
+}
+.gameserver table.info td {
+    text-align: right;
+}
+.gameserver details {
+    margin-bottom: 30px;
+    outline: none;
+}
+.gameserver details[open]:first-child {
+    margin-bottom: 0px;
+}
+.gameserver summary {
+    outline: none;
+    cursor: pointer;
+}
+.gameserver details[open] summary {
+    margin-bottom: 10px;
+}
+.gameserver details summary h4 span {
+    font-family: "Font Awesome 5 Free";
+    float: right;
+    color: #ccc;
+    font-weight: 900;
+}
+.gameserver details summary h4:hover {
+    font-weight: bold;
+}
+.gameserver details summary h4:hover span{
+    color: #333;
+}
+.gameserver details[open] summary h4 span::before { 
+    content: "\f65d";
+}
+.gameserver details summary h4 span::before { 
+    content: "\f65e";
+}

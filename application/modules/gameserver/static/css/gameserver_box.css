@@ -1,0 +1,101 @@
+div.box_container.gameserverbox {
+    width:100%;
+    overflow:hidden;
+    text-align:center;
+    padding-bottom: 15px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #ddd;
+}
+div.box_container_last.gameserverbox {
+    padding-bottom: 0px;
+    margin-bottom: 0px;
+    border-bottom: none;
+}
+.gameserverbox table.box_table {
+    width: 160px;
+    margin: auto;
+    text-align: center;
+    border: none;
+}
+.gameserverbox table.box_table td {
+    padding: 0px; 
+    text-align: center
+}
+.gameserverbox table.box_table td div.box_info {
+    width: 160px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-align: center;
+}
+.gameserverbox table.box_table td div.box_image {
+    width: 164px;
+    padding: 2px;
+    position: relative;
+    margin: 0 auto;
+    border: 1px solid #ccc;
+    border-radius: 2px;
+}
+.gameserverbox table.box_table td div.box_image img.image_map {
+    width: 160px !important;
+    vertical-align: middle;
+}
+.gameserverbox table.box_table td div.box_image img.image_password {
+    border: none;
+    position: absolute;
+    z-index: 2;
+    bottom: 2px;
+    right: 2px;
+    opacity: 0.8;
+}
+.gameserverbox table.box_table td div.box_image img.image_game {
+    border: none;
+    position: absolute;
+    z-index: 2;
+    top: 6px;
+    left: 6px;
+    width: 16px;
+    height: 16px;
+    opacity: 0.8;
+}
+.gameserverbox table.box_table td div.box_image img.image_location {
+    border: none;
+    position: absolute;
+    z-index: 2;
+    top: 6px;
+    right: 6px;
+    opacity: 0.8;
+}
+.gameserverbox table.box_table td.box_player {
+    padding: 0px;
+    border: 1px solid #ccc;
+    background-color: rgba(0, 0, 0, 0.05);
+}
+.gameserverbox table.box_table td.box_player div {
+    left: 0px;
+    right: 0px;
+    top: 0px;
+    bottom: 0px;
+    width: 160px; 
+    overflow-y: auto;
+    overflow-x: hidden;
+    text-align: left;
+}
+.gameserverbox table.box_table td.box_player div span.left {
+    padding: 1px;
+    float: left
+}
+.gameserverbox table.box_table td.box_player div span.right {
+    padding: 1px;
+    float: right
+}
+.gameserverbox table.box_table td.box_player div.box_playerlist {
+    left: 0px;
+    right: 0px;
+    top: 0px;
+    bottom: 0px;
+    padding-left: 1px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-align: left;
+    color: #666;
+}
