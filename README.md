@@ -19,4 +19,4 @@ _Live Game Server List for CMS Ilch 2_
 <br>_The module was built on the basis of LGSL v5.10.1 and adapted to Ilch 2_
 
 - Based on LGSL - Neon [tltneon / lgsl](https://github.com/tltneon/lgsl)
-- Original author of LGSL - Richard Perry [www.greycube.com](http://www.greycube.com/)
+- Original author of LGSL - Richard Perry [greycube](https://www.greycube.com/)
