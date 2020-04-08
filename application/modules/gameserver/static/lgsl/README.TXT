@@ -13,8 +13,11 @@ www.ilch.de
 ----------------------------------------------------------------
 
 Based on Live Game Server List for PHP 7+
-by Richard Perry | v 5.10.1
-www.greycube.com
+
+The module was built on the basis of LGSL (Live Game Server List for PHP 7+) v5.10.1 and adapted to Ilch 2
+
+Based on LGSL - Neon (https://github.com/tltneon/lgsl)
+Original author of LGSL - Richard Perry (http://www.greycube.com/)
 
 ----------------------------------------------------------------
 
