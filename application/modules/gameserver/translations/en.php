@@ -28,7 +28,7 @@ return [
     'infomb' => 'Used to show UTF-8 server and player names correctly',
     'infobz' => 'Used to show Source server settings over a certain size',
     'infogz' => 'Required for Americas Army 3',
-    'infosport' => 'The software port is only required for some games, so this field can be left blank.'
+    'infosport' => 'The software port is only required for some games, so this field can be left blank.',
     'infoqport' => 'For many servers the query port = connection port, then this field can be left blank. However, some servers use a different query port than the connection port. <a href="info">See also here</a>!',
     'infoqueryports' => 'Some servers use a slightly different query port than the connection port. Try to enter the query port as "Connection port + 1". Example: Connection port 27015 = query port 27016. This often applies to killing floor, unturned and some other servers.',
     'noServers' => 'No servers entered',
