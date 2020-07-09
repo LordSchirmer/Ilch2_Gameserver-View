@@ -10,7 +10,7 @@ class Config extends \Ilch\Config\Install
 {
     public $config = [
         'key' => 'gameserver',
-        'version' => '1.0.0',
+        'version' => '1.0.1',
         'icon_small' => 'fa-server',
         'author' => 'Lord|Schirmer',
         'link' => 'https://www.ilch.de/',
@@ -35,7 +35,7 @@ class Config extends \Ilch\Config\Install
             ]
         ],
         'ilchCore' => '2.1.31',
-        'phpVersion' => '5.6'
+        'phpVersion' => '7.0'
     ];
 
     public function install()

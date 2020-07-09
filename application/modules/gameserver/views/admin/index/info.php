@@ -21,27 +21,27 @@
         <tbody>
             <tr>
                 <th><a target="_blank" href="https://www.php.net/fsockopen">FSOCKOPEN</a></th>
-                <td><?=function_exists("fsockopen") ? '<i class="fa fa-check text-success"></i>' : '<i class="fa fa-ban text-danger"></i>'; ?></td>
+                <td><?=function_exists("fsockopen") ? '<i class="fa fa-check text-success"></i>' : '<i class="fa fa-ban text-danger"></i>' ?></td>
                 <td><?=$this->getTrans('infofsockopen') ?></td>
             </tr>
             <tr>
                 <th><a target="_blank" href="https://www.php.net/curl">CURL</a></th>
-                <td><?=function_exists("curl_init") && function_exists("curl_setopt") && function_exists("curl_exec") ? '<i class="fa fa-check text-success"></i>' : '<i class="fa fa-ban text-danger"></i>'; ?></td>
+                <td><?=function_exists("curl_init") && function_exists("curl_setopt") && function_exists("curl_exec") ? '<i class="fa fa-check text-success"></i>' : '<i class="fa fa-ban text-danger"></i>' ?></td>
                 <td><?=$this->getTrans('infocurl') ?></td>
             </tr>
             <tr>
                 <th><a target="_blank" href="https://www.php.net/mbstring">MBSTRING</a></th>
-                <td><?=function_exists("mb_convert_encoding") ? '<i class="fa fa-check text-success"></i>' : '<i class="fa fa-ban text-danger"></i>'; ?></td>
+                <td><?=function_exists("mb_convert_encoding") ? '<i class="fa fa-check text-success"></i>' : '<i class="fa fa-ban text-danger"></i>' ?></td>
                 <td><?=$this->getTrans('infomb') ?></td>
             </tr>
             <tr>
                 <th><a target="_blank" href="https://www.php.net/bzip2">BZIP2</a></th>
-                <td><?=function_exists("bzdecompress") ? '<i class="fa fa-check text-success"></i>' : '<i class="fa fa-ban text-danger"></i>'; ?></td>
+                <td><?=function_exists("bzdecompress") ? '<i class="fa fa-check text-success"></i>' : '<i class="fa fa-ban text-danger"></i>' ?></td>
                 <td><?=$this->getTrans('infobz') ?></td>
             </tr>
             <tr>
                 <th><a target="_blank" href="https://www.php.net/zlib">ZLIB</a></th>
-                <td><?=function_exists("gzuncompress") ? '<i class="fa fa-check text-success"></i>' : '<i class="fa fa-ban text-danger"></i>'; ?></td>
+                <td><?=function_exists("gzuncompress") ? '<i class="fa fa-check text-success"></i>' : '<i class="fa fa-ban text-danger"></i>' ?></td>
                 <td><?=$this->getTrans('infogz') ?></td>
             </tr>
         </tbody>

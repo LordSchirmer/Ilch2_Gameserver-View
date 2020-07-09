@@ -10,7 +10,7 @@ if ($this->get('server')):
         $server = lgsl_server_html($server);
         ?>
         
-        <div class="box_container<?=($key==(count($this->get('server'))-1))?'_last':''; ?> gameserverbox">
+        <div class="box_container<?=($key==(count($this->get('server'))-1))?'_last':'' ?> gameserverbox">
             <table class="box_table" cellspacing="0" cellpadding="0">
                 <tr>
                     <td>

@@ -1,7 +1,7 @@
 <?php 
 require APPLICATION_PATH.'/modules/gameserver/static/lgsl/lgsl_class.php';
 global $lgsl_server_id;
-$id               = ($this->getRequest()->getParam('id')) ? $this->getRequest()->getParam('id') : '0';
+$id               = ($this->getRequest()->getParam('id')) ?: '0';
 $server           = lgsl_query_cached("", "", "", "", "", "", "sep", $id);
 if ($server): 
     $site_title   = $server['s']['name'];

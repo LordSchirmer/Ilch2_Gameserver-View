@@ -9,9 +9,9 @@
         </label>
         <div class="col-lg-2">
             <div class="flipswitch">
-                <input type="radio" class="flipswitch-input" id="showLocation-on" name="showLocation" value="1" <?php if ($this->get('settings')->getShowLocation() == '1') { echo 'checked="checked"'; } ?> />
+                <input type="radio" class="flipswitch-input" id="showLocation-on" name="showLocation" value="1" <?=($this->get('settings')->getShowLocation() == '1') ? 'checked="checked"' : '' ?> />
                 <label for="showLocation-on" class="flipswitch-label flipswitch-label-on"><?=$this->getTrans('on') ?></label>
-                <input type="radio" class="flipswitch-input" id="showLocation-off" name="showLocation" value="0" <?php if ($this->get('settings')->getShowLocation() != '1') { echo 'checked="checked"'; } ?> />
+                <input type="radio" class="flipswitch-input" id="showLocation-off" name="showLocation" value="0" <?=($this->get('settings')->getShowLocation() != '1') ? 'checked="checked"' : '' ?> />
                 <label for="showLocation-off" class="flipswitch-label flipswitch-label-off"><?=$this->getTrans('off') ?></label>
                 <span class="flipswitch-selection"></span>
             </div>
@@ -28,12 +28,12 @@
         <div class="col-lg-2">
             <select name="fixLocation"
                     class="form-control"
-                    id="fixLocation" />
+                    id="fixLocation">
             <?php
             $listlocations = array();
             $o = opendir(APPLICATION_PATH.'/modules/gameserver/static/locations');
             while ($f = readdir($o)) {
-                if ($f != '.' AND $f != '..') {
+                if ($f !== '.' && $f !== '..') {
                     $listlocations[$f] = str_replace('.png','',$f);
                 }
             }
@@ -59,7 +59,7 @@
         <div class="col-lg-2">
             <select name="sortServers"
                     class="form-control"
-                    id="sortServers" />
+                    id="sortServers">
             <?php $listsortserver = array('pos' => 'Eigene Sortierung', 'type' => 'Servertyp', 'players' => 'Spieleranzahl', 'status' => 'Status'); ?>
             <?php foreach($listsortserver as $key => $value) {
                 $selected = ($this->get('settings')->getSortServers() == $key)?' selected':'';
@@ -76,7 +76,7 @@
         <div class="col-lg-2">
             <select name="sortPlayers"
                     class="form-control"
-                    id="sortPlayers" />
+                    id="sortPlayers">
             <?php $listsortplayer = array('name' => 'Spielername', 'score' => 'Ergebnis'); ?>
             <?php foreach($listsortplayer as $key => $value) {
                 $selected = ($this->get('settings')->getSortPlayers() == $key)?' selected':'';
@@ -92,11 +92,11 @@
             <?=$this->getTrans('cacheTime') ?>:
         </label>
         <div class="col-lg-2">
-            <input type="text"
+            <input type="number"
                    class="form-control"
                    id="cacheTime"
                    name="cacheTime"
-                   value="<?=$this->get('settings')->getCacheTime(); ?>" />
+                   value="<?=$this->get('settings')->getCacheTime() ?>" />
         </div>
         <div class="col-lg-6 alert alert-info">
             <strong><?=$this->getTrans('info') ?></strong> <?=$this->getTrans('infoCacheTime') ?>
@@ -108,11 +108,11 @@
             <?=$this->getTrans('liveTime') ?>:
         </label>
         <div class="col-lg-2">
-            <input type="text"
+            <input type="number"
                    class="form-control"
                    id="liveTime"
                    name="liveTime"
-                   value="<?=$this->get('settings')->getLiveTime(); ?>" />
+                   value="<?=$this->get('settings')->getLiveTime() ?>" />
         </div>
         <div class="col-lg-6 alert alert-info">
             <strong><?=$this->getTrans('info') ?></strong> <?=$this->getTrans('infoLiveTime') ?>
@@ -125,9 +125,9 @@
         </label>
         <div class="col-lg-2">
             <div class="flipswitch">
-                <input type="radio" class="flipswitch-input" id="timeOut-on" name="timeOut" value="1" <?php if ($this->get('settings')->getTimeOut() == '1') { echo 'checked="checked"'; } ?> />
+                <input type="radio" class="flipswitch-input" id="timeOut-on" name="timeOut" value="1" <?=($this->get('settings')->getTimeOut() == '1') ? 'checked="checked"' : '' ?> />
                 <label for="timeOut-on" class="flipswitch-label flipswitch-label-on"><?=$this->getTrans('on') ?></label>
-                <input type="radio" class="flipswitch-input" id="timeOut-off" name="timeOut" value="0" <?php if ($this->get('settings')->getTimeOut() != '1') { echo 'checked="checked"'; } ?> />
+                <input type="radio" class="flipswitch-input" id="timeOut-off" name="timeOut" value="0" <?=($this->get('settings')->getTimeOut() != '1') ?'checked="checked"' : '' ?> />
                 <label for="timeOut-off" class="flipswitch-label flipswitch-label-off"><?=$this->getTrans('off') ?></label>
                 <span class="flipswitch-selection"></span>
             </div>
@@ -143,9 +143,9 @@
         </label>
         <div class="col-lg-2">
             <div class="flipswitch">
-                <input type="radio" class="flipswitch-input" id="retryOffline-on" name="retryOffline" value="1" <?php if ($this->get('settings')->getRetryOffline() == '1') { echo 'checked="checked"'; } ?> />
+                <input type="radio" class="flipswitch-input" id="retryOffline-on" name="retryOffline" value="1" <?=($this->get('settings')->getRetryOffline() == '1') ? 'checked="checked"' : '' ?> />
                 <label for="retryOffline-on" class="flipswitch-label flipswitch-label-on"><?=$this->getTrans('on') ?></label>
-                <input type="radio" class="flipswitch-input" id="retryOffline-off" name="retryOffline" value="0" <?php if ($this->get('settings')->getRetryOffline() != '1') { echo 'checked="checked"'; } ?> />
+                <input type="radio" class="flipswitch-input" id="retryOffline-off" name="retryOffline" value="0" <?=($this->get('settings')->getRetryOffline() != '1') ? 'checked="checked"' : '' ?> />
                 <label for="retryOffline-off" class="flipswitch-label flipswitch-label-off"><?=$this->getTrans('off') ?></label>
                 <span class="flipswitch-selection"></span>
             </div>
@@ -161,9 +161,9 @@
         </label>
         <div class="col-lg-2">
             <div class="flipswitch">
-                <input type="radio" class="flipswitch-input" id="hostToIp-on" name="hostToIp" value="1" <?php if ($this->get('settings')->getHostToIp() == '1') { echo 'checked="checked"'; } ?> />
+                <input type="radio" class="flipswitch-input" id="hostToIp-on" name="hostToIp" value="1" <?=($this->get('settings')->getHostToIp() == '1') ? 'checked="checked"' : '' ?> />
                 <label for="hostToIp-on" class="flipswitch-label flipswitch-label-on"><?=$this->getTrans('on') ?></label>
-                <input type="radio" class="flipswitch-input" id="hostToIp-off" name="hostToIp" value="0" <?php if ($this->get('settings')->getHostToIp() != '1') { echo 'checked="checked"'; } ?> />
+                <input type="radio" class="flipswitch-input" id="hostToIp-off" name="hostToIp" value="0" <?=($this->get('settings')->getHostToIp() != '1') ? 'checked="checked"' : '' ?> />
                 <label for="hostToIp-off" class="flipswitch-label flipswitch-label-off"><?=$this->getTrans('off') ?></label>
                 <span class="flipswitch-selection"></span>
             </div>
@@ -180,9 +180,9 @@
         </label>
         <div class="col-lg-2">
             <div class="flipswitch">
-                <input type="radio" class="flipswitch-input" id="zonePlayer-on" name="zonePlayer" value="1" <?php if ($this->get('settings')->getZonePlayer() == '1') { echo 'checked="checked"'; } ?> />
+                <input type="radio" class="flipswitch-input" id="zonePlayer-on" name="zonePlayer" value="1" <?=($this->get('settings')->getZonePlayer() == '1') ? 'checked="checked"' : '' ?> />
                 <label for="zonePlayer-on" class="flipswitch-label flipswitch-label-on"><?=$this->getTrans('on') ?></label>
-                <input type="radio" class="flipswitch-input" id="zonePlayer-off" name="zonePlayer" value="0" <?php if ($this->get('settings')->getZonePlayer() != '1') { echo 'checked="checked"'; } ?> />
+                <input type="radio" class="flipswitch-input" id="zonePlayer-off" name="zonePlayer" value="0" <?=($this->get('settings')->getZonePlayer() != '1') ? 'checked="checked"' : '' ?> />
                 <label for="zonePlayer-off" class="flipswitch-label flipswitch-label-off"><?=$this->getTrans('off') ?></label>
                 <span class="flipswitch-selection"></span>
             </div>
@@ -197,11 +197,11 @@
             <?=$this->getTrans('zoneLineSize') ?>:
         </label>
         <div class="col-lg-2">
-            <input type="text"
+            <input type="number"
                    class="form-control"
                    id="zoneLineSize"
                    name="zoneLineSize"
-                   value="<?=$this->get('settings')->getZoneLineSize(); ?>" />
+                   value="<?=$this->get('settings')->getZoneLineSize() ?>" />
         </div>
         <div class="col-lg-6 alert alert-info">
             <strong><?=$this->getTrans('info') ?></strong> <?=$this->getTrans('infoZoneLineSize') ?>
@@ -213,16 +213,16 @@
             <?=$this->getTrans('zoneHeightLimit') ?>:
         </label>
         <div class="col-lg-2">
-            <input type="text"
+            <input type="number"
                    class="form-control"
                    id="zoneHeightLimit"
                    name="zoneHeightLimit"
-                   value="<?=$this->get('settings')->getZoneHeightLimit(); ?>" />
+                   value="<?=$this->get('settings')->getZoneHeightLimit() ?>" />
         </div>
         <div class="col-lg-6 alert alert-info">
             <strong><?=$this->getTrans('info') ?></strong> <?=$this->getTrans('infoZoneHeightLimit') ?>
         </div>
     </div>
 
-    <?=$this->getSaveBar('saveButton'); ?>
+    <?=$this->getSaveBar('saveButton') ?>
 </form>
