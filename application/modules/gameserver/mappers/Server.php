@@ -127,10 +127,10 @@ class Server extends \Ilch\Mapper
     {
         $serverType = $this->db()->select('type')
             ->from('gameserver')
-            ->where(['id' => (int)$this->db()->escape($id)])
+            ->where(['id' => $id])
             ->execute()
             ->fetchCell();
-        
+
         if (empty($serverType)) {
             return null;
         }

@@ -44,11 +44,11 @@ class Index extends \Ilch\Controller\Admin
             ]
         ];
 
-        if ($this->getRequest()->getActionName() == 'show') {
+        if ($this->getRequest()->getActionName() === 'show') {
             $items[0][0]['active'] = true;
-        } else if ($this->getRequest()->getActionName() == 'settings') {
+        } else if ($this->getRequest()->getActionName() === 'settings') {
             $items[1]['active'] = true;
-        } else if ($this->getRequest()->getActionName() == 'info') {
+        } else if ($this->getRequest()->getActionName() === 'info') {
             $items[2]['active'] = true;
         } else {
             $items[0]['active'] = true;
@@ -69,7 +69,7 @@ class Index extends \Ilch\Controller\Admin
                 ->add($this->getTranslator()->trans('menuGameserver'), ['action' => 'index'])
                 ->add($this->getTranslator()->trans('manage'), ['action' => 'index']);
 
-        if ($this->getRequest()->getPost('action') == 'delete' && $this->getRequest()->getPost('check_servers')) {
+        if ($this->getRequest()->getPost('action') === 'delete' && $this->getRequest()->getPost('check_servers')) {
             foreach ($this->getRequest()->getPost('check_servers') as $receiveId) {
                 $serverMapper->delete($receiveId);
             }
@@ -121,9 +121,9 @@ class Index extends \Ilch\Controller\Admin
                 
                 $type = trim($this->getRequest()->getPost('type'));
                 $ip = trim($this->getRequest()->getPost('ip'));
-                $c_port = empty($this->getRequest()->getPost('c_port')) ? 0 : intval(trim($this->getRequest()->getPost('c_port')));
-                $q_port = empty($this->getRequest()->getPost('q_port')) ? 0 : intval(trim($this->getRequest()->getPost('q_port')));
-                $s_port = empty($this->getRequest()->getPost('s_port')) ? 0 : intval(trim($this->getRequest()->getPost('s_port')));
+                $c_port = empty($this->getRequest()->getPost('c_port')) ? 0 : (int)trim($this->getRequest()->getPost('c_port'));
+                $q_port = empty($this->getRequest()->getPost('q_port')) ? 0 : (int)trim($this->getRequest()->getPost('q_port'));
+                $s_port = empty($this->getRequest()->getPost('s_port')) ? 0 : (int)trim($this->getRequest()->getPost('s_port'));
                 
                 if (preg_match("/(\[[0-9a-z\:]+\])/iU", $ip, $match)) {
                     $ip = $match[1];
